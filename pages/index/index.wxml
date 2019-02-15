@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class='container'>
+
+  <!-- search布局 -->
+  <view class='search'>
+    <image src='/images/icon/search_icon.png' class='search-img'></image>
+    <input focus='true' type='text' placeholder='请输入你要搜索的商品'  bindconfirm='onBindSearch'/>
+    <image wx:if='{{search_xxShow}}' src='/images/icon/xx.png' class='xx-img' catchtap='onCancleImgTap'></image>
+  </view>
+
+  <!-- baner -->
+  <swiper class=''></swiper>
+</view>
