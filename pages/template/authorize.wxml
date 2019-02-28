@@ -1,0 +1,13 @@
+<template name="authorize">
+  <view class="authorize">
+    <open-data class="header" type="userAvatarUrl" mode="aspectFit"></open-data>
+    <view class="line"></view>
+    <view class="content">该小程序由cdb开发，请提供以下授权，即可继续操作</view>
+    <view class="desp">
+      <text class="dot"></text>
+      <text>获取你的公开信息(昵称、头像等)</text>
+    </view>
+    <!-- 绑定点击事件 获取登录0权限 -->
+    <button open-type='getUserInfo' bindgetuserinfo='{{btnClick}}' class="btn" hover-class="hover-class-style">确认授权</button>
+  </view>
+</template>

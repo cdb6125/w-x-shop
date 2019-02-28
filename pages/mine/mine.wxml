@@ -1,1 +1,46 @@
-<text>个人中心</text>
+<!-- 导入外部组件 -->
+<import src="../template/authorize.wxml" />
+<import src="../template/loading.wxml" />
+
+<block wx:if="{{userInfo}}">
+  <!-- 登陆成功显示的页面 -->
+  <view wx:if="{{mineBeen}}">
+    <!-- 个人信息展示 -->
+    <view class='user-info'>
+      <view class='left'>{{userInfo.nickName}}</view>
+      <view class='right'>
+        <image src="{{userInfo.avatarUrl}}"></image>
+      </view>
+    </view>
+    <!-- 详细事项布局 -->
+    <view class="mine-item">
+      <view class="weui-cells weui-cells_after-title">
+        <block wx:for="{{mineBeen.settings}}" wx:key="{{index}}">
+          <view 
+              bindtap="itemClick" 
+              data-index="{{index}}"
+              class="weui-cell weui-cell_access" 
+              hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image src="{{item.imageUrl}}" style="margin-right: 5px;vertical-align: middle;width:28px; height: 28px;"></image>
+            </view>
+            <view class="weui-cell__bd" style="font-size:36rpx;">{{item.name}}</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </view>
+        </block>
+
+      </view>
+    </view>
+
+
+  </view>
+  <!-- 没有登录成功显示加载中··· -->
+  <view wx:else>
+    <template is="loading"></template>
+  </view>
+</block>
+
+
+<block wx:else>
+  <template is="authorize" data="{{btnClick:'authorizeClick'}}"></template>
+</block>

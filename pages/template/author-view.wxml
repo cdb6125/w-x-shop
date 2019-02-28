@@ -1,0 +1,7 @@
+<template name="author-view">
+  <view style="background:#f4f4f4;height:120rpx;display: flex;flex-direction: row;align-items: center;">
+    <image src="../../images/icon/mark.png" style="margin:0rpx 20rpx;width:40rpx;height:40rpx"></image>
+    <!-- <icon style="margin:0rpx 0rpx;" type="info" size="40rpx" color='blue' /> -->
+    <text style="color:gray;font-size:28rpx">请授权头像等信息，以便为您提供更好的服务</text>
+  </view>
+</template>

@@ -1,19 +1,25 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/cart/cart",
+    "pages/mine/mine",
     "pages/sort/sort",
-    "pages/mine/mine"
+    "pages/cart/cart",
+    "pages/details/details",
+    "pages/indent/indent",
+    "pages/discount/discount"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#405f80",
     "navigationBarTitleText": "微信商城",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 200
   },
   "tabBar": {
     "borderStyle": "black",
     "position": "bottom",
+    "selectedColor": "black",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -43,7 +49,9 @@
   },
   "networkTimeout": {
     "request": 10000,
-    "downloadFile": 10000
+    "connectSocket": 50000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
   },
   "debug": true
 }

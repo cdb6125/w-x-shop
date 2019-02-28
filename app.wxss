@@ -1,1 +1,5 @@
 /**app.wxss**/
+@import "./pages/style/weui.wxss";
+page {
+  height: 100%;
+}

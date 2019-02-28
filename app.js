@@ -27,5 +27,12 @@ App({
    */
   onError: function (msg) {
     
+  },
+
+  //全局变量
+  globalData: {
+    userInfo: null,
+    isLogin: false, 
+    token: null 
   }
 })
